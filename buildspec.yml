@@ -15,6 +15,6 @@ phases:
       - mvn package
 artifacts:
   files:
-    - target/my-app-0.1-SNAPSHOT.jar
+    - target/functional-testing-0.0.1-SNAPSHOT.jar
   discard-paths: yes
   base-directory: 'assignment-1-2-4'
