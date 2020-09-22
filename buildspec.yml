@@ -1,4 +1,9 @@
 version: 0.2
+env:
+    secrets-manager:
+        projectKey: SpringBootExample:Sonarqube-projectKey
+        url:  SpringBootExample:Sonarqube-hosturl
+        login: SpringBootExample:Sonarqube-login
 
 phases:
   install:
@@ -8,7 +13,8 @@ phases:
     commands:
       - echo Build started on `date`
       - cd assignment-1-2-4
-      - mvn test 
+      - mvn test
+      - mvn sonar:sonar -Dsonar.projectKey=$projectKey -Dsonar.host.url=$url -Dsonar.login=$login 
   post_build:
     commands:
       - echo Build completed on `date`
