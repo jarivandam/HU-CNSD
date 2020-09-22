@@ -1,0 +1,3 @@
+FROM tomcat:8.5
+
+ADD cddb4.war /usr/local/tomcat/webapps/cddb.war
