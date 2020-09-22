@@ -1,9 +1,9 @@
 version: 0.2
 env:
     secrets-manager:
-        projectKey: SpringBootExample:Sonarqube-projectKey
-        url:  SpringBootExample:Sonarqube-hosturl
-        login: SpringBootExample:Sonarqube-login
+        projectKey: arn:aws:secretsmanager:us-east-1:731669785092:secret:SpringBootExample-w0SV6r:Sonarqube-projectKey
+        url:  arn:aws:secretsmanager:us-east-1:731669785092:secret:SpringBootExample-w0SV6r:Sonarqube-hosturl
+        login: arn:aws:secretsmanager:us-east-1:731669785092:secret:SpringBootExample-w0SV6r:Sonarqube-login
 
 phases:
   install:
