@@ -1,14 +1,19 @@
 version: 0.2
 
 phases:
+  install:
+    runtime-versions:
+      java: openjdk11
   build:
     commands:
       - echo Build started on `date`
-      - mvn test
+      - mvn test 
   post_build:
     commands:
       - echo Build completed on `date`
       - mvn package
 artifacts:
   files:
-    - target/spring-boot-0.1.0.jar
+    - target/my-app-0.1-SNAPSHOT.jar
+  discard-paths: yes
+  base-directory: 'assignment-1-2-4'
