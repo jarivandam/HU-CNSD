@@ -4,7 +4,7 @@ env:
         projectKey: arn:aws:secretsmanager:us-east-1:779346166963:secret:SpringBootExample-r755a6:Sonarqube-projectKey
         url:  arn:aws:secretsmanager:us-east-1:779346166963:secret:SpringBootExample-r755a6:Sonarqube-hosturl
         login: arn:aws:secretsmanager:us-east-1:779346166963:secret:SpringBootExample-r755a6:Sonarqube-login
-        project: arn:aws:secretsmanager:us-east-1:779346166963:secret:SpringBootExample-r755a6:Sonarqube-project
+        project: arn:aws:secretsmanager:us-east-1:779346166963:secret:SpringBootExample-r755a6:Sonarqube-projectname
 phases:
   install:
     runtime-versions:
