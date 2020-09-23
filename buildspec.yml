@@ -1,10 +1,10 @@
 version: 0.2
 env:
     secrets-manager:
-        projectKey: arn:aws:secretsmanager:us-east-1:731669785092:secret:SpringBootExample-w0SV6r:Sonarqube-projectKey
-        url:  arn:aws:secretsmanager:us-east-1:731669785092:secret:SpringBootExample-w0SV6r:Sonarqube-hosturl
-        login: arn:aws:secretsmanager:us-east-1:731669785092:secret:SpringBootExample-w0SV6r:Sonarqube-login
-
+        projectKey: arn:aws:secretsmanager:us-east-1:779346166963:secret:SpringBootExample-r755a6:Sonarqube-projectKey
+        url:  arn:aws:secretsmanager:us-east-1:779346166963:secret:SpringBootExample-r755a6:Sonarqube-hosturl
+        login: arn:aws:secretsmanager:us-east-1:779346166963:secret:SpringBootExample-r755a6:Sonarqube-login
+        project: arn:aws:secretsmanager:us-east-1:779346166963:secret:SpringBootExample-r755a6:Sonarqube-login
 phases:
   install:
     runtime-versions:
@@ -14,7 +14,7 @@ phases:
       - echo Build started on `date`
       - cd assignment-1-2-4
       - mvn test
-      - mvn sonar:sonar -Dsonar.projectKey=$projectKey -Dsonar.host.url=$url -Dsonar.login=$login 
+      - mvn sonar:sonar -Dsonar.projectName=$Project -Dsonar.projectKey=$projectKey -Dsonar.host.url=$url -Dsonar.login=$login 
   post_build:
     commands:
       - echo Build completed on `date`
