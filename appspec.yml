@@ -1,0 +1,9 @@
+version: 0.0
+os: linux
+files:
+  - source: assignment-1-2-4
+    destination: /home/ec2-user/server
+hooks:
+  ApplicationStart:
+    - location: scripts/ApplicationStart.sh
+      timeout: 120
