@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Cloud Native Development Bank</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><div class="logo">Quintor</div></li>
+                <li>home</li>
+                <li>aanmelden</li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Quintor Bank</h1>
+            <div class="container">
+                <div class="container_header">
+                    Gegevens voor K Test 1
+                </div>
+                <h3>Klantgegevens</h3>
+                <form>
+                    <div>
+                        <label for="voorletters">Voorletters</label>
+                        <input type="text" id="voorletters" name="voorletters" required pattern="[A-Za-z].">
+                    </div>
+                    <div>
+                        <label for="achternaam">Achternaam</label>
+                        <input type="text" id="achternaam" name="achternaam" required pattern="[A-Za-z] ">
+                    </div>
+                    <div>
+                        <label for="straat">Straat</label>
+                        <input type="text" id="straat" name="straat" required>
+                    </div>
+                    <div>
+                        <label for="huisnummer">Huisnummer</label>
+                        <input type="text" id="huisnummer" name="huisnummer" required>
+                    </div>
+                    <div>
+                        <label for="postcode">Postcode</label>
+                        <input type="text" id="postcode" name="postcode" required pattern="^\d{4}\s?\w{2}$">
+                    </div>
+                    <div>
+                        <label for="bsn">BSN</label>
+                        <input type="text" id="bsn" name="bsn" required pattern="^\d{9}"> 
+                    </div>
+                    <div>
+                        <label for="geboortedatum">Geboortedatum</label>
+                        <input type="date" id="geboortedatum" name="geboortedatum" required>
+                    </div>
+                    <div>
+                        <label for="telefoonnummer">Tel.nr</label>
+                        <input type="text" id="telefoonnummer" name="telefoonnummer" required pattern="^\d{10}">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <button id="oplaan_button">Opslaan</button>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

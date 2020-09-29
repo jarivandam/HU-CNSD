@@ -1,0 +1,67 @@
+nav{
+    background-color: grey;
+}
+
+nav ul{
+    list-style-type: none;
+    padding-top : 2%;
+    padding-bottom: 2%;
+    color: lightgray;
+}
+
+nav li{
+    display: inline;
+    
+
+}
+
+.logo{
+    font-weight: bold;
+    display: inline;
+}
+.error{
+    background-color: lightcoral;
+    padding: 1%;
+    color:darkred;
+    margin-bottom: 1%;
+}
+
+.container{
+    border-width: 1px;
+    border: grey;
+    border-style: solid;
+    
+}
+
+.container_center{
+    border-width: 1px;
+    border: grey;
+    border-style: solid;
+    margin-right: 30%;
+    margin-left: 30%;
+}
+.container_header{
+    background-color: lightgray;
+    border: grey;
+    border-bottom-style: solid;
+    padding: 5px;
+}
+form{
+    padding: 1%;
+}
+
+input {
+    margin: 1%;
+}
+#aanmeld_button{
+    background-color: #0d47a1  ;
+    color: white;
+    width: 100%;
+    padding: 10px;
+}
+
+#oplaan_button{
+    background-color: #0d47a1  ;
+    color: white;
+    padding: 10px;
+}

@@ -1,0 +1,106 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <script>
+            var number = Math.random();
+            var x_stmnt;
+            if (number > 0.7) {
+                x_stmnt = 1;
+            } else {
+                x_stmnt = 0;
+            }
+
+            var x_expr = (number > 0.7) ? 1: 0;
+
+            console.assert(x_stmnt === x_expr);
+        </script>
+        <script>
+            var arr = Array(50).fill(null);
+
+            var i;
+            var arr2_stmnt = [];
+            for (i = 0; i < arr.length; i += 1) {
+                var val = Math.random();
+                if (val < 0.3) continue;
+                val = Math.floor(val * 100);
+                arr2_stmnt.push(val);
+            }
+            console.log(arr2_stmnt);
+
+            var arr2_expr = arr.map(x => Math.random()).filter(x => x >= 0.3).map(x => Math.floor(x * 100));
+            console.log(arr2_expr);
+        </script>
+        <script>
+            var foo = function foo( x ) {
+                if (x > 4) {
+                    throw new Error('x > 4');
+                }
+                x++;
+                x *= 100;
+                return Math.floor(x)
+            };
+            // [1, 2, 3, 4, 5].map(foo);
+        </script>
+
+        <script>
+            function fibonacci(n) {
+                if (n == 0){
+                    return 0;
+                }
+                else if (n==1){
+                    return 1
+                }
+                else{
+                    return fibonacci(n-1) + fibonacci(n-2)
+                }
+            }
+            console.log(fibonacci(7));
+            var fib = function(n){
+                if (n == 0){
+                    return 0;
+                }
+                else if (n==1){
+                    return 1
+                }
+                else{
+                    return fib(n-1) + fib(n-2)
+                }
+            }
+            console.log(fib(7))
+        </script>
+
+        <script>
+            function teller(startWaarde){
+                return {
+                    startWaarde: this.startWaarde,
+                    metStapGrootte : function (stapGrootte){
+                        return {
+                            volgende : function(){
+                                this.startWaarde += stapGrootte
+                                console.log(this);
+                                return this.startWaarde
+                            }
+                        }
+                    }
+                }
+            }
+            const T = teller(5).metStapGrootte(2);
+            console.log(T.volgende()); // 7
+            console.log(T.volgende()); // 9
+            console.log(T.volgende()); // 11
+        </script>
+
+        <script src="Dier.js"></script>
+        <script src="Hond.js"></script>
+        <script src="Kat.js"></script>
+        <script>
+            const kat = new Kat("bep")
+            const hond = new Hond("vikkie")
+
+            console.log(kat.spreek());
+            console.log(hond.spreek());
+        </script>
+    </body>
+</html>
