@@ -6,7 +6,7 @@ phases:
   build:
     commands:
         - zip function.zip lambda_function.py
-        - aws lambda update-function-code --function-name MyPhotoProcessor --zip-file fileb://function.zip
+        - aws lambda update-function-code --function-name MyPhotoProcessor --zip-file fileb://function.zip --publish
 artifacts:
   files:
     - function.zip

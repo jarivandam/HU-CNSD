@@ -4,12 +4,11 @@ import os
 import sys
 import uuid
 
-
-
 s3_client = boto3.client('s3')
 
 
 def lambda_handler(event, context):
+    ## Check all events that are given to this function
     for record in event['Records']:
        print ("test")
        payload = record["body"]
