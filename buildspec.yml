@@ -1,0 +1,12 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+        python: 3.8
+  build:
+    commands:
+        - zip function.zip lambda_function.py
+        - aws lambda update-function-code --function-name MyPhotoProcessor --zip-file fileb://function.zip
+artifacts:
+  files:
+    - function.zip
